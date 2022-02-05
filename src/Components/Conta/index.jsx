@@ -18,7 +18,7 @@ const Conta = () => {
   };
 
   return (
-    <Box className="box">
+    <Box>
       <h2>Conta</h2>
       <Box style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
@@ -26,12 +26,11 @@ const Conta = () => {
           <Icone src={dinheiro} alt="Ícone Saldo" />
         </Detalhe>
         {toggleState ? (
-          <Box className="saldo">
+          <Saldo>
             <Detalhe>R$</Detalhe> 0,00{" "}
-          </Box>
+          </Saldo>
         ) : null}
       </Box>
-
       <Btn onClick={toggleHandler}>
         <IconeMargin src={toggleState ? privado : olho_icone} alt="Privacidade do Saldo" />
       </Btn>
